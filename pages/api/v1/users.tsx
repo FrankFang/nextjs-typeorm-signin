@@ -4,7 +4,7 @@ import {User} from '../../../src/entity/User';
 import {useEffect} from 'react';
 import md5 from 'md5';
 
-const Posts: NextApiHandler = async (req, res) => {
+const Users: NextApiHandler = async (req, res) => {
   const {username, password, passwordConfirmation} = req.body;
   const connection = await getDatabaseConnection();// 第一次链接能不能用 get
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
@@ -25,4 +25,4 @@ const Posts: NextApiHandler = async (req, res) => {
   res.end();
 };
 
-export default Posts;
+export default Users;
