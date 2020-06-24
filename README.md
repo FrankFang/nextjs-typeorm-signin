@@ -1,3 +1,5 @@
+请先下载代码
+
 ## 启动数据库
 
 如果你没有创建过数据库，请运行
@@ -17,20 +19,6 @@ docker ps -a
 docker restart 容器id
 ```
 
-## 清空之前的开发环境
-
-```
-docker ps
-docker kill 容器id
-docker rm 容器id
-
-rm -rf blog-data
-或
-docker container prune 
-docker volume rm blog-data
-
-```
-
 ## 创建数据库
 
 ```
@@ -45,7 +33,6 @@ CREATE DATABASE blog_development ENCODING 'UTF8' LC_COLLATE 'en_US.utf8' LC_CTYP
 
 ```
 yarn m:run
-node dist/seed.js
 ```
 
 ## 开发
